@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:11:23 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/27 20:46:45 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/28 12:48:47 by mariaavolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ static size_t	ft_formato(char c, va_list list)
 		special = ft_string(va_arg(list, char *));
 	else if (c == 'p')
 		special = ft_adress(va_arg(list, unsigned long));
-	else if (c == 'd' || c == 'i' || c == 'u')
+	else if (c == 'd' || c == 'i')
 		special = ft_number(va_arg(list, int));
+	else if (c == 'u')
+		special = ft_unsigned_number(va_arg(list, unsigned int));
 	else if (c == 'x')
-		special = ft_hexa(va_arg(list, unsigned long), HEXALOW);
+		special = ft_hexa(va_arg(list, unsigned int), HEXALOW);
 	else if (c == 'X')
-		special = ft_hexa(va_arg(list, unsigned long), HEXAHIGH);
+		special = ft_hexa(va_arg(list, unsigned int), HEXAHIGH);
 	if (c == '%')
 		special = ft_character('%');
 	return (special);

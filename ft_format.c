@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:10:39 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/27 20:54:20 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/28 09:37:35 by mariaavolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,22 +58,45 @@ int	ft_number(int n)
 	return (i);
 }
 
+/* %u - prints a unsigned decimal (base 10) number */
+int	ft_unsigned_number(unsigned int n)
+{
+	int	i;
+
+	i = 0;
+	if (n > 9)
+	{
+		i += ft_unsigned_number((n / 10));
+		i += ft_unsigned_number((n % 10));
+	}
+	else
+		i += ft_character((n + 48));
+	return (i);
+}
 
 /* %x &&
 	%X- prints a number in hexadecimal (base 16)
-	lowercase and highcase format */
+	low and highcase format */
 size_t	ft_hexa(unsigned long n, char *hexa_case)
 {
 	if (n < 16)
 		return (ft_character(hexa_case[n]));
-	return (ft_hexa(n / 16, hexa_case), +ft_character(hexa_case[n % 16]));
+	return (ft_hexa(n / 16, hexa_case) + ft_character(hexa_case[n % 16]));
 }
 
 /* %p - the void
 	* pointer argument has to be printed in hexadecimal format */
-size_t	ft_adress(unsigned long loc)
-{
-	if (!loc)
-		return (ft_character('\0'));
-	return (ft_string("0x"), ft_hexa(loc, HEXALOW));
+size_t	ft_adress(unsigned long int loc)
+{	
+	int	i;
+
+	i = 0;
+	if (loc == 0)
+		i += ft_string("0x0");
+	else 
+	{
+		i += ft_string("0x");
+		i += ft_hexa(loc, HEXALOW);
+	}
+	return (i);
 }

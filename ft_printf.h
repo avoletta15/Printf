@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 19:01:33 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/27 20:48:00 by marioliv         ###   ########.fr       */
+/*   Updated: 2023/04/28 09:27:44 by mariaavolet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int		ft_character(char c);
-size_t	ft_string(char *str);
-int		ft_number(int n);
-size_t	ft_hexa(unsigned long n, char *hexa_case);
-size_t	ft_adress(unsigned long ptr);
-int		ft_printf(const char *param, ...);
+int			ft_character(char c);
+size_t		ft_string(char *str);
+int			ft_number(int n);
+int			ft_unsigned_number(unsigned int n);
+size_t		ft_hexa(unsigned long n, char *hexa_case);
+size_t		ft_adress(unsigned long int n);
+int			ft_printf(const char *param, ...);
 
 #endif

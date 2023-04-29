@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+         #
+#    By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 18:12:42 by marioliv          #+#    #+#              #
-#    Updated: 2023/04/27 19:10:09 by marioliv         ###   ########.fr        #
+#    Updated: 2023/04/28 12:48:09 by mariaavolet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
