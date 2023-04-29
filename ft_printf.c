@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+        */
+/*   By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:11:23 by marioliv          #+#    #+#             */
-/*   Updated: 2023/04/28 12:48:47 by mariaavolet      ###   ########.fr       */
+/*   Updated: 2023/04/29 16:26:00 by marioliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	ft_formato(char c, va_list list)
 {
 	size_t	special;
 
-		special = 0;
+	special = 0;
 	if (c == 'c')
 		special = ft_character(va_arg(list, int));
 	else if (c == 's')

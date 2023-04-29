@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mariaavoletta <mariaavoletta@student.42    +#+  +:+       +#+         #
+#    By: marioliv <marioliv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 18:12:42 by marioliv          #+#    #+#              #
-#    Updated: 2023/04/28 12:48:09 by mariaavolet      ###   ########.fr        #
+#    Updated: 2023/04/29 16:28:05 by marioliv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-FILE = ft_format.c ft_printf.c
+FILE = ft_character.c ft_string.c ft_number.c ft_unsigned.c \
+		ft_hexa.c ft_adress.c ft_printf.c
 
 FILE_O = $(FILE:.c=.o)
 
