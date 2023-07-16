@@ -18,12 +18,12 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int			ft_character(char c);
+int			  ft_character(char c);
 size_t		ft_string(char *str);
-int			ft_number(int n);
-int			ft_unsigned_number(unsigned int n);
+int			  ft_number(int n);
+int			  ft_unsigned_number(unsigned int n);
 size_t		ft_hexa(unsigned long n, char *hexa_case);
 size_t		ft_adress(unsigned long int n);
-int			ft_printf(const char *param, ...);
+int			  ft_printf(const char *param, ...);
 
 #endif
